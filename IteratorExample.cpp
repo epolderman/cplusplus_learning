@@ -1,6 +1,21 @@
 #include "pch.h"
 #include "IteratorExample.h"
 
+/*
+	iterator pros: can insert and remove from containers without manually shifting contents.
+
+	item 26: Prefer iterator to const_iterator, reverse_iterator, and const_reverse_iterator
+
+	- Most containers in the STL demand parameters to be of type iterator, not const iterator.
+	- const_iterators are largely useless if you want to specify insertion positions or elements to be erased
+	- const_iterators are useful in algorithms. 
+	- const_iterators are not worth the trouble.
+
+	item 27: Use distance and advance to convert a containers const_iterators to iterators.
+
+	- ....
+
+*/
 
 IteratorExample::IteratorExample()
 {
