@@ -3,13 +3,10 @@
 
 /*
 	iterator pros: can insert and remove from containers without manually shifting contents.
-
 	item 26: Prefer iterator to const_iterator, reverse_iterator, and const_reverse_iterator
-
-	- Most containers in the STL demand parameters to be of type iterator, not const iterator.
-	- const_iterators are largely useless if you want to specify insertion positions or elements to be erased
-	- const_iterators are useful in algorithms. 
-	- const_iterators are not worth the trouble.
+	**This item has changed since C++11, now containers have const iterators cbegin,cend and
+	most of the insertions and erases now accept const iterators
+	- Most containers in the STL demand parameters to be of type iterator, not const iterator. (Not true anymore)
 
 	item 27: Use distance and advance to convert a containers const_iterators to iterators.
 
@@ -56,6 +53,14 @@ IteratorExample::IteratorExample()
 	}
 	cout << "After Insertion:" << endl;
 	print(two);
+
+	// use const iterators > iterators since c++11
+	using someAlistBrah = vector<int>::const_iterator;
+	someAlistBrah constIterator = two.cbegin();
+	someAlistBrah endConstIterator = two.cend();
+	vector<int> myVector(constIterator, endConstIterator);
+	print(myVector);
+	
 
 	cout << "ITERATOR EXAMPLE END->>>>>>" << endl;
 }
