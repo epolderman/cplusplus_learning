@@ -59,7 +59,13 @@ IteratorExample::IteratorExample()
 	someAlistBrah constIterator = two.cbegin();
 	someAlistBrah endConstIterator = two.cend();
 	vector<int> myVector(constIterator, endConstIterator);
+
 	print(myVector);
+	auto it = std::remove_if(myVector.begin(), myVector.end(), [](const int v) {return v == 10; });
+	myVector.erase(it, myVector.end());
+	print(myVector);
+
+
 	
 
 	cout << "ITERATOR EXAMPLE END->>>>>>" << endl;
