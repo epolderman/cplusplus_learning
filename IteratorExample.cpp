@@ -45,11 +45,16 @@ IteratorExample::IteratorExample()
 	// iterators (random access for vectors // generalization over pointers)
 	vector<int> v = { 1, 2, 3 };
 	print(v);
-
 	vector<int> one = { 1 ,2, 3, 4, 5 };
-	print(one);
-
 	vector<int> two(one);
+
+	vectorIterator i;
+	for (i = two.begin(); i != two.end(); ++i) {
+		if (i == two.begin()) {
+			i = two.insert(i, 10);
+		}
+	}
+	cout << "After Insertion:" << endl;
 	print(two);
 
 	cout << "ITERATOR EXAMPLE END->>>>>>" << endl;
