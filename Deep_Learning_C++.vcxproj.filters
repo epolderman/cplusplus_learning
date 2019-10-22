@@ -21,6 +21,12 @@
     <ClInclude Include="MoveConstructorExample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IteratorExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -30,6 +36,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IteratorExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorExample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

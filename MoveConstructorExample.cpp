@@ -23,14 +23,3 @@ https://akrzemi1.wordpress.com/2011/08/11/move-constructor/
 
 http://definedbehavior.blogspot.com/2011/08/value-semantics-copy-elision.html
 */
-
-MoveConstructorExample::MoveConstructorExample()
-{
-	cout << "Constructor" << endl;
-}
-
-
-MoveConstructorExample::~MoveConstructorExample()
-{
-	cout << "Destructor" << endl;
-}
