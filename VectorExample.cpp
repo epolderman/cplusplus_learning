@@ -76,8 +76,8 @@ VectorExample::VectorExample()
 	cout << veg.x << " " << veg.y << " " << veg.z << endl;
 	vector<vector3d> tempVectorContainer = { veg };
 	cout << tempVectorContainer.size() << endl;
-	tempVectorContainer.push_back(vector3d());
-	tempVectorContainer.push_back(vector3d());
+	tempVectorContainer.push_back(vector3d{});
+	tempVectorContainer.push_back(vector3d{});
 
 	cout << "Size before remove if " << tempVectorContainer.size() << endl;
 	vector3d vee;
